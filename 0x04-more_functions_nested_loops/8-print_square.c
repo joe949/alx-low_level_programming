@@ -3,6 +3,7 @@
 /**
  * print_square - use character to print square
  * @#: character to be used
+ * @size: number of squares
  * Return: void
  */
 
@@ -20,7 +21,7 @@ void print_square(int size)
 		{
 			for (j = 0; j < size; j++)
 			{
-				_putchar('#');
+				_putchar(35);
 			}
 			_putchar('\n');
 		}
