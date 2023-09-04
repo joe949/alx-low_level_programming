@@ -1,6 +1,6 @@
 #include "main.h"
 #include<stdio.h>
-#include<stdlibh>
+#include<stdlib.h>
 /**
  * free_grid - free 2d array
  * @grid: 2d grid
