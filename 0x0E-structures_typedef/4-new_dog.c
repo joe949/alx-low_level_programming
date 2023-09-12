@@ -1,11 +1,12 @@
-#include<stdlib.h>
+#include <stdlib.h>
 #include "dog.h"
 
-/** 
+
+/**
  * _strlen - returns the length of a string
  * @s: string to evaluate
  *
- * Return: length of string
+ * Return: the length of the string
  */
 int _strlen(char *s)
 {
@@ -22,8 +23,8 @@ int _strlen(char *s)
 
 /**
  * *_strcpy - copies the string pointed to by src
- * including the terminating null byte (\0) to the buffer
- * pointed to by dest
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
  * @dest: pointer to the buffer in which we copy the string
  * @src: string to be copied
  *
@@ -31,7 +32,8 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int len,i;
+	int len, i;
+
 
 	len = 0;
 
@@ -49,13 +51,14 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 
+
 /**
  * new_dog - creates a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  *
- * Return: pointer to new dog(Success), NULL otherwise
+ * Return: pointer to the new dog (Success), NULL otherwise
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -85,6 +88,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
 	dog->age = age;
+
 
 	return (dog);
 }
