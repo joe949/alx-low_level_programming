@@ -5,7 +5,7 @@
 /**
  * print_numbers - prints numbers, followed by a new line
  * @separator: string to be printed between numbers
- * @n: number of integers pased to function
+ * @n: number of integers passed to function
  * @...: varible number of numbers to be printed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (index = 0; index < n; index++)
 	{
-		printf("%d", va_args(nums, int));
+		printf("%d", va_arg(nums, int));
 
 		if (index != (n - 1) && separator != NULL)
 			printf("%s", separator);
