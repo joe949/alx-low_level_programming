@@ -1,6 +1,4 @@
 #include "lists.h"
-#include<string.h>
-#include<stdlib.h>
 
 /**
  * add_node_end - adds new node at end of linked list
@@ -12,7 +10,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *cur;
-	list_t *temp = *heda;
+	list_t *temp = *head;
 	unsigned int len = 0;
 
 	while (str[len])
@@ -28,7 +26,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (*head == NULL)
 	{
-		*haed = cur;
+		*head = cur;
 		return (cur);
 	}
 
