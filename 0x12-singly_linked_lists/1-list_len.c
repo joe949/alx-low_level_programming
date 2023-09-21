@@ -1,5 +1,4 @@
-#include<stdlib.h>
-#include "lists."
+#include "lists.h"
 
 /**
  * list_len - numbers the elements in alinked list
