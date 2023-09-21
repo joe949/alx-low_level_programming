@@ -7,7 +7,7 @@
  * Return: address of new element or NULL incase it fails
  */
 
-list_t *add_node(list_t **head, const cahr *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *cur;
 	unsigned int len = 0;
