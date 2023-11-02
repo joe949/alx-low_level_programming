@@ -6,7 +6,7 @@
  * Return: pointer to allocated memory,
  * if malloc fails, terminate with status 98
  */
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
 	char *pr;
 
