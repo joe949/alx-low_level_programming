@@ -36,8 +36,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buf[bytesR] = '\0';
 
-	bytesW = fwrite(buf, 1, bytesR, stdout);
-	if (bytesW < bytesR || ferror(stdout))
+	bytesW = write(STDOUT_FILENO, buf, bytesR);
+	if (bytesW < bytesR)
 	{
 		free(buf);
 		fclose(file);
