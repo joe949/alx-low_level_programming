@@ -8,11 +8,12 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, tl, bytesW;
+	int fd; 
+	ssize_t tl, bytesW;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, 0_CREAT | 0_WRONLY | 0_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (fd == -1)
 		return (-1);
