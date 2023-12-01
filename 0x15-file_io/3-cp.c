@@ -51,22 +51,6 @@ void write_to_file(int fd_from, int fd_to)
 		error_exit(98, "Error: Can't read from file %s\n", "");
 }
 /**
- * close_file - function to close a file
- * @fd: file descriptor
- * @file_name: name of file
- *
- * Return: void
- */
-void close_file(int fd, const char *file_name)
-{
-	if (close(fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-}
-
-/**
  * main - main function
  * @argc: arguments count
  * @argv: arguments vector
@@ -89,8 +73,16 @@ int main(int argc, char *argv[])
 
 	write_to_file(fd_from, fd_to);
 
-	close_file(fd_from, file_from);
-	close_file(fd_to, file_to);
+	if (close(fd_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
+	}
+	if (close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+		exit(100);
+	}
 
 	return (0);
 }
