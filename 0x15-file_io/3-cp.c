@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	const char *file_from, *file_to;
 
 	if (argc != 3)
-		error_exit(97, "Usage: cp file_from file_to\n", "");
+		error_exit(97, "Usage: cp file_from file_to\n", argv[0]);
 
 	file_from = argv[1];
 	file_to = argv[2];
